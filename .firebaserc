@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todo-flask-rest": {
+      "hosting": {
+        "inventario": [
+          "todo-flask-rest"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todo-flask-rest"
+  }
+}

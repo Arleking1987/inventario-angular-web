@@ -1,0 +1,71 @@
+.icon-bar {
+    width: 90px; /* Set a specific width */
+    background-color: #555; /* Dark-grey background */
+  }
+  
+  .icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font-size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  .active {
+    background-color: #E6D0CE; /* Add an active/current color */
+  }
+
+  .form-container {
+    border: 1px solid #fff;
+    padding: 50px 60px;
+    margin-top: 0%;
+    -webkit-box-shadow: 7px 13px 36px 23px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 7px 13px 36px 23px rgba(0, 0, 0, 0.68);
+    box-shadow: 7px 13px 36px 23px rgba(0, 0, 0, 0.68);
+}
+
+.main {
+    display: flexbox;   
+}
+
+.textIntro {
+    
+    width: 100%;
+    
+}
+
+
+
+
+.content {
+    width: 100%;
+}
+
+.left {
+    padding-left: 0px;
+    padding-top: 10px;
+    margin-left: -15px;
+    float: left;
+    position: relative;
+    width: 5%;
+    height: auto;
+}
+
+.right {
+    padding-top: 150px;
+    padding-left: 10px;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 95%;
+    height: auto;
+}
+
+.infoGeneral h1{
+  font-weight: bold;
+}

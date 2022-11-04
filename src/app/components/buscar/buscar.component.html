@@ -1,0 +1,56 @@
+
+<div class="container-fluid main">
+  <div class="content">
+      <div class="left">
+          <div class="icon-bar">
+              <a (click)="redirectToMain()"><i class="fa fa-home"></i></a>
+              <a class="active"><i class="fa fa-search"></i></a>
+              <a (click)="redirectToIngresar()"><i class="fa fa-share-square"></i></a>
+              <a href="#"><i class="fa fa-refresh"></i></a>
+              <a href="#"><i class="fa fa-trash"></i></a>
+              <a href="" (click)="onClick()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+          </div>
+      </div>
+      <div class="right">
+          <div class="row textIntro" >
+          <div class="col-md-8 col-sm-4 col-xs-12 infoGeneral"></div>
+          <div class="col-md-4 col-sm-4 col-xs-12" style="width:100%">
+              <!-- Inicio menu -->
+              <form class="form-container infoGeneral">
+              <div class="container containerRight">
+                <h1>Listado de productos</h1>
+                <div class="form-group">
+                    <input type="text" class="forms-control" placeholder="Buscar" [(ngModel)]="filterProduct" name="filterProduct">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container containerTab">
+            <table class="table table-bordered productos">
+                <thead>
+                  <tr>       
+                    <th>Estado</th>       
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Tipo</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let person of persons | filter:filterProduct">
+                    <td>{{ person.product_estado }}</td>
+                    <td>{{ person.product_id }}</td>
+                    <td>{{ person.product_name }}</td>
+                    <td>{{ person.product_quantity }}</td>  
+                    <td>{{ person.product_tipeProduct }}</td>     
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+              </form>
+              <!-- fin menu -->
+          </div>
+      </div>
+  </div></div>
+  </div>

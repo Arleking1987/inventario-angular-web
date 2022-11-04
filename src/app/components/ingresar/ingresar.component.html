@@ -1,0 +1,92 @@
+<div class="container-fluid main">
+    <div class="content">
+        <div class="left">
+            <div class="icon-bar">
+                <a (click)="redirectToMain()"><i class="fa fa-home"></i></a>
+                <a (click)="redirectToBuscar()"><i class="fa fa-search"></i></a>
+                <a class="active"><i class="fa fa-share-square"></i></a>
+                <a redirectToActualizar()><i class="fa fa-refresh"></i></a>
+                <a href="#"><i class="fa fa-trash"></i></a>
+                <a href="" (click)="onClick()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="row textIntro">
+                <div class="col-md-8 col-sm-4 col-xs-12 infoGeneral"></div>
+                <div class="col-md-4 col-sm-4 col-xs-12" style="width:100%">
+                    <!-- Inicio menu -->
+                    <form class="form-container infoGeneral">
+                        
+                        <div class="container containerTab">
+                            <h2>INGRESO DE NUEVOS PRODUCTOS</h2>
+                            <p style="font-weight:bold ;">En este espacio podrás ingresar las nuevas colecciones disponibles,
+                                asegúrate de llenar apropiadamente cada uno de los campos.</p>
+                            <div class="container containerForm">
+                                <form action="/action_page.php"  [formGroup]="formProduct" (ngSubmit)="onSubmit()">
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="fname">Referencia del producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="fname" name="firstname" placeholder="Refrencia" formControlName="referencia">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="lname">Nombre del producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="lname" name="lastname"
+                                                placeholder="Nombre" formControlName="nombre">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="country">Tipo de producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="lname" name="lastname"
+                                                placeholder="Tipo" formControlName="tipo">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="country">Cantidad del producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="lname" name="lastname"
+                                                placeholder="Cantidad" formControlName="cantidad">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="country">Ubicación de la imagen del producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="lname" name="lastname"
+                                                placeholder="Ubcación imagen" formControlName="imagen">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="subject">Descripción del producto</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <textarea id="subject" name="subject" placeholder="Descripción"
+                                                style="height:200px" formControlName="descripcion"></textarea>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <input class="col-25" type="submit" value="Submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- fin menu -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
